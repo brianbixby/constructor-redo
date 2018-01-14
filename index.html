@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>forms and events</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+      <form id="house-form">
+          <fieldset>
+              <label for="street">
+                Street Address
+              </label>
+              <input type="text" name="street" placeholder="Please enter your street Address" minlength="6" required>
+          </fieldset>
+
+          <fieldset>
+              <label for="city">
+                City
+              </label>
+              <input type="text" name="city" placeholder="please enter your home's city" required>
+          </fieldset>
+
+          <fieldset>
+            <label for="state">Please Select the state of your house</label>
+            <select name="state" required>
+                    <option value="wa">wa</option>
+                    <option value="or">or</option>
+                    <option value="ca">ca</option>
+                    <option value="ny">ny</option>
+             </select>
+          </fieldset>
+
+          <fieldset>
+              <label for="zip">Please Enter your zip</label>
+              <input type="text" name="zip" required>
+          </fieldset>
+
+          <fieldset>
+              <label for="selling">Do you want to sell soon?</label>
+              <input type="checkbox" name="selling" value="Wants to Sell">
+          </fieldset>
+
+          <fieldset>
+              <label for="ownership-length">How long have you lived at your house?</label>
+              <input type="radio" value="no" name="ownership-length"> 0 - 10 years
+              <input type="radio" name="ownershipLength" value="yes"> > 10 years
+          </fieldset>
+
+          <button id="submitButton" type="submit">Submit</button>
+      </form>
+
+      <section>
+          <table>
+              <thead>
+                  <th>street</th>
+                  <th>city</th> 
+                  <th>state</th>
+                  <th>zip</th>
+                  <th>selling</th>
+                  <th>ownership-length</th>
+                </thead>
+                <tbody id="car-table">
+
+                </tbody>
+          </table>
+      </section>
+
+
+    <script src="app.js"></script>
+  </body>
+</html>
