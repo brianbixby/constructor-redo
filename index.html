@@ -8,61 +8,37 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-      <form id="house-form">
-          <fieldset>
-              <label for="street">
-                Street Address
-              </label>
-              <input type="text" name="street" placeholder="Please enter your street Address" minlength="6" required>
-          </fieldset>
+      <form id="myform">
+        <fieldset>
+            <label for="userName">enter name</label>
+            <input type="text" name="userName" placeholder="enter your name" minlength="2" required>
+        </fieldset>
 
-          <fieldset>
-              <label for="city">
-                City
-              </label>
-              <input type="text" name="city" placeholder="please enter your home's city" required>
-          </fieldset>
+        <fieldset>
+            <label for="gender">your gender</label>
+            <input type="radio" name="gender" value="male">male
+            <input type="radio" name="gender" value="female">female
+        </fieldset>
 
-          <fieldset>
-            <label for="state">Please Select the state of your house</label>
-            <select name="state" required>
-                    <option value="wa">wa</option>
-                    <option value="or">or</option>
-                    <option value="ca">ca</option>
-                    <option value="ny">ny</option>
-             </select>
-          </fieldset>
+        <fieldset>
+            <label for="mood">Ifyou're happy check the box</label>
+            <input type="checkbox" name="mood" value="happy">
+        </fieldset>
 
-          <fieldset>
-              <label for="zip">Please Enter your zip</label>
-              <input type="text" name="zip" required>
-          </fieldset>
+        <button id="myButton" type="submit">Submit your form</button>
 
-          <fieldset>
-              <label for="selling">Do you want to sell soon?</label>
-              <input type="checkbox" name="selling" value="Wants to Sell">
-          </fieldset>
-
-          <fieldset>
-              <label for="ownership-length">How long have you lived at your house?</label>
-              <input type="radio" value="no" name="ownership-length"> 0 - 10 years
-              <input type="radio" name="ownershipLength" value="yes"> > 10 years
-          </fieldset>
-
-          <button id="submitButton" type="submit">Submit</button>
       </form>
+
+
 
       <section>
           <table>
               <thead>
-                  <th>street</th>
-                  <th>city</th> 
-                  <th>state</th>
-                  <th>zip</th>
-                  <th>selling</th>
-                  <th>ownership-length</th>
+                  <th>name</th>
+                  <th>gender</th> 
+                  <th>mood</th>
                 </thead>
-                <tbody id="car-table">
+                <tbody id="myTable">
 
                 </tbody>
           </table>

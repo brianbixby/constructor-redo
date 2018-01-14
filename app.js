@@ -1,47 +1,37 @@
 'use strict';
 
-var form = document.getElementById('house-form');
-var table = document.getElementById('car-table');
+var form = document.getElementById('myform');
+var table= document.getElementById('myTable');
 var data = [];
 
-function House(street,city,state,zip,selling,ownershipLength) {
-    this.street=street;
-    this.city=city;
-    this.state=state;
-    this.zip=zip;
-    this.selling=selling;
-    this.ownershipLength=ownershipLength;
+function Person(userName, gender, mood) {
+    this.userName=userName;
+    this.gender=gender;
+    this.mood=mood;
     console.log(data);
 }
 
 function formData(event) {
+    console.log('formdata');
     event.preventDefault();
 
-    var street=event.target.street.value;
-    var city=event.target.city.value;
-    var state=event.target.state.value;
-    var zip=event.target.zip.value;
-    var selling = event.target.selling.checked;
-    var ownershipLength = event.target.ownershipLength.value;
-
-    data.push(new House(street, city, state, zip, selling, ownershipLength));
-    createTable();
+    var userName = event.target.userName.value;
+    var gender = event.target.gender.value;
+    var mood = event.target.mood.checked;
+    console.log(userName, gender, mood);
+    data.push(new Person(userName, gender, mood));
+    updateTable();
     form.reset();
 }
 
-function createTable() {
-    var row;
-    for (var i = 0; i < data.length; i++) {
-        console.log(row);
-        row = document.createElement('tr');
-        row.innerHTML = '<td>' + data[i].street +'</td>' +
-        '<td>' + data[i].city + '</td>' +
-        '<td>' + data[i].state + '</td>' +
-        '<td>' + data[i].zip + '</td>' +
-        '<td>' + data[i].selling + '</td>' +
-        '<td>' + data[i].ownershipLength + '</td>'
+function updateTable() {
+    var row = row;
+    for(var i=0; i<data.length; i++) {
+        row=document.createElement('tr');
+        row.innerHTML = '<td>' + data[i].userName + '</td>' +
+        '<td>' + data[i].gender + '</td>' +
+        '<td>' + data[i].mood + '</td>'
     }
-    console.log(row);
     table.appendChild(row);
 }
 
